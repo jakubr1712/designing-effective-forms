@@ -1,3 +1,36 @@
+body {
+    overflow: hidden; /* nie przewija całego body */
+}
+
+.container-sm {
+    background-color: white;
+    border-radius: 0.5rem;
+    box-shadow: 0 0 10px rgba(0,0,0,0.05);
+}
+
+form {
+    font-size: 0.95rem;
+}
+
+
 .modal {
     background: #c6d0ff7a;
+}
+
+#countrySuggestions {
+    max-height: 200px;
+    overflow-y: auto;
+    border: 1px solid #dee2e6;
+    border-top: none;
+}
+
+.form-check-input {
+    width: 1.2em;
+    height: 1.2em;
+    margin-top: 0.3em;
+}
+
+.form-check-label {
+    cursor: pointer;
+    padding-left: 0.5em;
 }
