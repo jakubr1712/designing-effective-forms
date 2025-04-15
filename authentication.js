@@ -1,9 +1,8 @@
   import { initializeApp } from "https://www.gstatic.com/firebasejs/11.6.0/firebase-app.js";
-  
   import { getAuth, GoogleAuthProvider, signInWithPopup, signOut, onAuthStateChanged } from "https://www.gstatic.com/firebasejs/11.6.0/firebase-auth.js";
 
   const firebaseConfig = {
-   
+    
   };
 
   const app = initializeApp(firebaseConfig);
@@ -39,6 +38,13 @@ const userSignIn = async () => {
     if (user) {
         alert("You are authenticated with Google");
         console.log(user);
+    const nameParts = user.displayName.split(" ");
+    const firstName = nameParts[0];
+    const lastName = nameParts.slice(1).join(" ");
+        
+    document.querySelector("#firstName").value = firstName || "";
+    document.querySelector("#lastName").value = lastName || "";
+     document.querySelector("#exampleInputEmail1").value = user.email || "";
     }
  })
  
